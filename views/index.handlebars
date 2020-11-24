@@ -1,0 +1,80 @@
+<!--  ./views/index.handlebars -->
+<form method="POST" action="/submit">
+  <div class="container-fluid">
+    <div class="row justify-content-center frame mt-3">
+
+      <div>
+        <h1>你想對誰說幹話?</h1>
+      </div>
+
+    </div>
+
+    <div class="row justify-content-around frame mt-3">
+
+      <label class="card" style="width: 25rem;">
+        <img class="card-img-top img-size initImg scaleDownImg"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          alt="Card image cap">
+        <div class="card-body container">
+          <div class="row align-items-center justify-content-center">
+            <div class="align">
+              <input class="align-item" type="radio" name="trashTalk" value="engineer"
+                {{#ifEqual choice "engineer"}}checked{{/ifEqual}}>
+            </div>
+            <h5 class="card-title ml-2">工程師</h5>
+          </div>
+        </div>
+      </label>
+
+      <label class="card" style="width: 25rem;">
+        <img class="card-img-top img-size initImg scaleDownImg"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          alt="Card image cap">
+        <div class="card-body container">
+          <div class="row align-items-center justify-content-center">
+            <div class="align">
+              <input class="align-item" type="radio" name="trashTalk" value="designer"
+                {{#ifEqual choice "designer"}}checked{{/ifEqual}}>
+            </div>
+            <h5 class="card-title ml-2">設計師</h5>
+          </div>
+        </div>
+      </label>
+
+      <label class="card" style="width: 25rem;">
+        <img class="card-img-top img-size initImg scaleDownImg"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          alt="Card image cap">
+        <div class="card-body container">
+          <div class="row align-items-center justify-content-center">
+            <div class="align">
+              <input class="align-item" type="radio" name="trashTalk" value="entrepreneur"
+                {{#ifEqual choice "entrepreneur"}}checked{{/ifEqual}}>
+            </div>
+            <h5 class="card-title ml-2">創業家</h5>
+          </div>
+        </div>
+      </label>
+
+    </div>
+
+    <div class="row justify-content-center frame">
+
+      <div>
+        <button class="btn btn-outline-secondary pt-3" type="submit">
+          <h5>產生幹話</h5>
+        </button>
+      </div>
+
+      <div class="ml-5 messagebox col-8">
+        {{#ifEqual gT "請選擇職業"}}
+        <h1 class="message" style="color:rgb(165, 42, 42)">{{gT}}!!!!</h1>
+        {{else}}
+        <h3 class="message">{{gT}}</h3>
+        {{/ifEqual}}
+      </div>
+
+    </div>
+
+  </div>
+</form>

@@ -1,0 +1,40 @@
+.frame{
+  margin-left: 2vw;
+  margin-right: 2vw;
+
+}
+.card-title{
+  margin: 0px;
+}
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+}
+.align{
+  display: flex;
+}
+.align-item{
+  align-items: center;
+  justify-content: center;
+}
+.card{
+border: none;
+}
+.initImg{
+    width: 25rem;
+    height: 25rem;
+    border: 1px solid #e5e5e5;
+}
+.scaleDownImg{
+    object-fit: scale-down;
+}
+.messagebox{
+  border: 3px solid #e5e5e5;
+  border-radius: 5px;
+  height: 10vw;
+  position: relative;
+}
+.message{
+  position: absolute;
+  top: 10px;
+}
